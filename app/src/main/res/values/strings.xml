@@ -1,0 +1,33 @@
+<resources>
+    <string name="app_name">Explain My Pain</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_registration_page">RegistrationPage</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+    <string name="title_activity_login">Sign in</string>
+
+    <!-- Strings related to login -->
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password (optional)</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="error_invalid_email">This email address is invalid</string>
+    <string name="error_invalid_password">This password is too short</string>
+    <string name="error_incorrect_password">This password is incorrect</string>
+    <string name="error_field_required">This field is required</string>
+    <string name="permission_rationale">"Contacts permissions are needed for providing email
+        completions."
+    </string>
+    <string name="title_activity_login_page">LoginPage</string>
+    <string name="title_activity_registration_email">RegistrationEmail</string>
+    <string name="title_activity_patient_added">PatientAdded</string>
+    <string name="title_activity_new_patient_registration">NewPatientRegistration</string>
+    <string name="title_activity_patient_homepage">PatientHomepage</string>
+    <string name="title_activity_doctor_patient_homepage">DoctorPatientHomepage</string>
+    <string name="title_activity_doctor_patient_home">DoctorPatientHome</string>
+    <string name="section_format">Hello World from section: %1$d</string>
+    <string name="title_activity_doctor_homepage">DoctorHomepage</string>
+    <string name="title_activity_pain_book">PainBook</string>
+    <string name="title_activity_tabbed">tabbed</string>
+    <string name="title_activity_tabbed_doctor">tabbedDoctor</string>
+</resources>

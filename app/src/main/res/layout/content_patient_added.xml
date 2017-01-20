@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/content_patient_added"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.example.andreadellaporta.explainmypain.PatientAdded"
+    tools:showIn="@layout/activity_patient_added"
+    android:background="#FFF0A5">
+
+    <TextView
+        android:text="Explain My Pain"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView"
+        android:textStyle="bold"
+        android:fontFamily="cursive"
+        android:textSize="25sp"
+        android:textColor="#17615B"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <ImageView
+        android:layout_width="85dp"
+        android:layout_height="85dp"
+        app:srcCompat="@drawable/yourdoctor"
+        android:id="@+id/imageView"
+        android:layout_below="@+id/textView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="8dp" />
+
+    <TextView
+        android:text="Please wait for the patient's confirmation. Once confirmed, the patient will be in your list"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView2"
+        android:textStyle="bold"
+        android:fontFamily="cursive"
+        android:textSize="25sp"
+        android:textColor="#17615B"
+        android:textAlignment="center"
+        android:layout_marginTop="29dp"
+        android:layout_below="@+id/imageView" />
+
+    <Button
+        android:id="@+id/button"
+
+        android:text="Homepage"
+        android:textColor="#FFF0A5"
+        android:textSize="15sp"
+
+        android:background="@drawable/buttonshape2"
+        android:shadowColor="#A8A8A8"
+        android:shadowDx="0"
+        android:shadowDy="0"
+        android:shadowRadius="5"
+        android:textAllCaps="false"
+        android:layout_width="150dp"
+        android:layout_height="30dp"
+        android:fontFamily="casual"
+        android:textStyle="normal|bold"
+        android:layout_below="@+id/textView2"
+        android:layout_alignStart="@+id/textView"
+        android:layout_marginTop="33dp" />
+
+</RelativeLayout>

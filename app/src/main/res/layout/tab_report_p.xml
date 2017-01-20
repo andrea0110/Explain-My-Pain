@@ -1,0 +1,64 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.andreadellaporta.explainmypain.tabbed$PlaceholderFragment"
+    android:background="#FFF0A5">
+
+    <TextView
+        android:text="View your report list"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView10"
+        android:textStyle="bold"
+        android:fontFamily="cursive"
+        android:textSize="30sp"
+        android:textColor="#17615B"
+        android:textAlignment="center"
+        android:layout_marginTop="25dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+
+
+    <ImageView
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        app:srcCompat="@drawable/guida"
+        android:id="@+id/imageView4"
+        android:layout_alignParentBottom="true"
+        android:layout_toStartOf="@+id/textView10" />
+
+    <TextView
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView22"
+        android:textStyle="bold"
+        android:fontFamily="cursive"
+        android:textSize="20sp"
+        android:textColor="#17615B"
+        android:textAlignment="center"
+        android:layout_alignTop="@+id/imageView4"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="23dp"
+        android:layout_marginTop="23dp"
+        android:text="Here you can see your daily, weekly or monthly report of your pain and also your stress and mood and activity level" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:layout_above="@+id/imageView4"
+        android:layout_alignParentStart="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" />
+    </ScrollView>
+
+</RelativeLayout>
