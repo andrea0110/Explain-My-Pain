@@ -7,7 +7,7 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.example.andreadellaporta.explainmypain.tabbed$PlaceholderFragment"
+    tools:context="com.example.andreadellaporta.explainmypain.Tabbed$PlaceholderFragment"
     android:background="#FFF0A5">
 
     <TextView
@@ -47,7 +47,7 @@
         android:id="@+id/spinner3" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/login"
 
         android:text="Indicate your pain"
         android:textColor="#FFF0A5"

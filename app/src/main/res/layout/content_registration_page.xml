@@ -207,7 +207,7 @@
         android:textSize="20sp" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/login"
 
         android:text="Register"
         android:textColor="#FFF0A5"
@@ -223,8 +223,8 @@
         android:layout_height="30dp"
         android:fontFamily="casual"
         android:textStyle="normal|bold"
+        android:layout_marginBottom="15dp"
         android:layout_alignParentBottom="true"
-        android:layout_toEndOf="@+id/textView7"
-        android:layout_marginBottom="12dp" />
+        android:layout_centerHorizontal="true" />
 
 </RelativeLayout>

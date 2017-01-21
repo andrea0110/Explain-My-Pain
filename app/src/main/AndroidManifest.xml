@@ -52,11 +52,11 @@
             android:label="@string/title_activity_doctor_homepage"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".tabbed"
+            android:name=".Tabbed"
             android:label="@string/title_activity_tabbed"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".tabbedDoctor"
+            android:name=".TabbedDoctor"
             android:label="@string/title_activity_tabbed_doctor"
             android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>

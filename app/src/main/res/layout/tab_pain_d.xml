@@ -8,7 +8,7 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     android:background="#FFF0A5"
-    tools:context="com.example.andreadellaporta.explainmypain.tabbedDoctor$PlaceholderFragment">
+    tools:context="com.example.andreadellaporta.explainmypain.TabbedDoctor$PlaceholderFragment">
 
     <TextView
         android:text="New Pain Entry"
@@ -47,7 +47,7 @@
         android:id="@+id/spinner3" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/login"
 
         android:text="Indicate patient's pain"
         android:textColor="#FFF0A5"
