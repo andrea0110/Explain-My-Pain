@@ -62,7 +62,7 @@
         <activity
             android:name=".TabbedDoctor"
             android:label="@string/title_activity_tabbed_doctor"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
     </application>
 
 </manifest>
