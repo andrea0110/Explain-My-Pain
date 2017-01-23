@@ -1,26 +1,25 @@
 package com.example.andreadellaporta.explainmypain;
-
 import android.content.Intent;
+import android.widget.*;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
-import android.widget.Button;
 
-public class NewPatientRegistration extends AppCompatActivity {
+public class LoginPageP extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_new_patient_registration);
+        setContentView(R.layout.activity_login_page_p);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        Button addPatient=(Button) findViewById(R.id.register);
-        addPatient.setOnClickListener(new View.OnClickListener() {
+        Button login=(Button) findViewById(R.id.login_p);
+        login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent=new Intent(getApplicationContext(), PatientAdded.class);
+                Intent intent=new Intent(getApplicationContext(), Tabbed.class);
                 startActivity(intent);
             }
         });

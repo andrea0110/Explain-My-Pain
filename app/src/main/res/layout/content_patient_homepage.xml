@@ -72,9 +72,9 @@
         android:fontFamily="cursive"
         android:textSize="17sp"
         android:textColor="#17615B"
-        android:layout_below="@+id/imageButton7"
+        android:layout_below="@+id/entryP"
         android:layout_alignParentStart="true"
-        android:layout_toStartOf="@+id/imageButton10" />
+        android:layout_toStartOf="@+id/compile" />
 
     <TextView
         android:text="Compile your Pain Book"
@@ -86,8 +86,8 @@
         android:textSize="15sp"
         android:textColor="#17615B"
         android:layout_marginTop="33dp"
-        android:layout_alignTop="@+id/imageButton7"
-        android:layout_toEndOf="@+id/imageButton7" />
+        android:layout_alignTop="@+id/entryP"
+        android:layout_toEndOf="@+id/entryP" />
 
     <TextView
         android:text="View your report"
@@ -98,7 +98,7 @@
         android:fontFamily="cursive"
         android:textSize="17sp"
         android:textColor="#17615B"
-        android:layout_below="@+id/imageButton8"
+        android:layout_below="@+id/newreportD"
         android:layout_alignParentEnd="true" />
 
     <ImageButton
@@ -108,7 +108,7 @@
         android:background="#FFF0A5"
         android:adjustViewBounds="true"
         app:srcCompat="@drawable/medical"
-        android:id="@+id/imageButton7"
+        android:id="@+id/entryP"
         android:layout_below="@+id/textView11"
         android:layout_alignParentStart="true"
         android:layout_marginTop="16dp" />
@@ -119,7 +119,7 @@
         android:scaleType="fitCenter"
         android:background="#FFF0A5"
         app:srcCompat="@drawable/painbook"
-        android:id="@+id/imageButton10"
+        android:id="@+id/compile"
         android:layout_below="@+id/textView14"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="10dp" />
@@ -131,7 +131,7 @@
         android:background="#FFF0A5"
         android:adjustViewBounds="true"
         app:srcCompat="@drawable/report"
-        android:id="@+id/imageButton8"
+        android:id="@+id/newreportD"
         android:layout_above="@+id/textView12"
         android:layout_alignParentEnd="true" />
 
@@ -165,7 +165,7 @@
         android:textSize="20sp"
         android:textColor="#17615B"
         android:textAlignment="center"
-        android:layout_alignStart="@+id/imageButton10"
+        android:layout_alignStart="@+id/compile"
         android:layout_alignTop="@+id/imageView4" />
 
 

@@ -48,7 +48,7 @@ public class TabbedDoctor extends AppCompatActivity {
         mSectionsPagerAdapter = new SectionsPagerAdapter(getSupportFragmentManager());
 
         // Set up the ViewPager with the sections adapter.
-        mViewPager = (ViewPager) findViewById(R.id.container);
+        mViewPager = (ViewPager) findViewById(R.id.container2);
         mViewPager.setAdapter(mSectionsPagerAdapter);
 
         TabLayout tabLayout = (TabLayout) findViewById(R.id.tabs);
@@ -102,10 +102,10 @@ public class TabbedDoctor extends AppCompatActivity {
                 case 1:
                     TabPainD tab2=new TabPainD();
                     return tab2;
-                case 3:
+                case 2:
                     TabReportD tab3=new TabReportD();
                     return tab3;
-                case 4:
+                case 3:
                     TabPatientdata tab4=new TabPatientdata();
                     return tab4;
                 default:

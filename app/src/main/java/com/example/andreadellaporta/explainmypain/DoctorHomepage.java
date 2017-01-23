@@ -15,12 +15,21 @@ public class DoctorHomepage extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        Button addPatient= (Button) findViewById(R.id.login);
+        Button addPatient= (Button) findViewById(R.id.register);
         addPatient.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent=new Intent(getApplicationContext(), NewPatientRegistration.class);
                 startActivity(intent);
+            }
+        });
+
+        Button confirm= (Button) findViewById(R.id.confirmPatient);
+        confirm.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent2=new Intent(getApplicationContext(), TabbedDoctor.class);
+                startActivity(intent2);
             }
         });
 

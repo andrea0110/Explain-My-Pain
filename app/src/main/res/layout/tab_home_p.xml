@@ -7,8 +7,8 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.example.andreadellaporta.explainmypain.Tabbed$PlaceholderFragment"
-    android:background="#FFF0A5">
+    android:background="#FFF0A5"
+    android:id="@+id/homep">
 
     <TextView
         android:text="How do you feel today?"
@@ -47,22 +47,55 @@
         android:fontFamily="cursive"
         android:textSize="17sp"
         android:textColor="#17615B"
-        android:layout_below="@+id/imageButton7"
+        android:layout_below="@+id/entryP"
         android:layout_alignParentStart="true"
-        android:layout_toStartOf="@+id/imageButton10" />
+        android:layout_toStartOf="@+id/compile" />
+
+    <ImageButton
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:scaleType="fitCenter"
+        android:background="#FFF0A5"
+        android:adjustViewBounds="true"
+        app:srcCompat="@drawable/report"
+        android:id="@+id/newreportP"
+        android:layout_alignTop="@+id/entryP"
+        android:layout_alignParentEnd="true" />
+
+
+    <ImageButton
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:scaleType="fitCenter"
+        android:background="#FFF0A5"
+        android:adjustViewBounds="true"
+        app:srcCompat="@drawable/medical"
+        android:id="@+id/entryP"
+        android:layout_below="@+id/textView11"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="13dp" />
 
     <TextView
-        android:text="Compile your Pain Book"
+        android:text="Hello! I'm here for help you. This is your homepage. You can insert a new pain entry, compile your pain book with your feels and view your reports."
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/textView14"
-        android:textStyle="bold"
-        android:fontFamily="cursive"
-        android:textSize="15sp"
+        android:id="@+id/textView22"
         android:textColor="#17615B"
-        android:layout_marginTop="33dp"
-        android:layout_alignTop="@+id/imageButton7"
-        android:layout_toEndOf="@+id/imageButton7" />
+        android:fontFamily="cursive"
+        android:textAlignment="center"
+        android:layout_marginTop="31dp"
+        android:textSize="20sp"
+        android:layout_below="@+id/imageView4"
+        android:layout_alignParentStart="true" />
+
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        app:srcCompat="@drawable/guida"
+        android:id="@+id/imageView4"
+        android:layout_marginTop="92dp"
+        android:layout_below="@+id/textView12"
+        android:layout_toEndOf="@+id/textView12" />
 
     <TextView
         android:text="View your report"
@@ -73,20 +106,8 @@
         android:fontFamily="cursive"
         android:textSize="17sp"
         android:textColor="#17615B"
-        android:layout_below="@+id/imageButton8"
+        android:layout_below="@+id/newreportP"
         android:layout_alignParentEnd="true" />
-
-    <ImageButton
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:scaleType="fitCenter"
-        android:background="#FFF0A5"
-        android:adjustViewBounds="true"
-        app:srcCompat="@drawable/medical"
-        android:id="@+id/imageButton7"
-        android:layout_below="@+id/textView11"
-        android:layout_alignParentStart="true"
-        android:layout_marginTop="16dp" />
 
     <ImageButton
         android:layout_width="100dp"
@@ -94,20 +115,21 @@
         android:scaleType="fitCenter"
         android:background="#FFF0A5"
         app:srcCompat="@drawable/painbook"
-        android:id="@+id/imageButton10"
-        android:layout_below="@+id/textView14"
+        android:id="@+id/compile"
+        android:layout_alignBottom="@+id/textView12"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:text="Compile your Pain Book"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView14"
+        android:textStyle="bold"
+        android:fontFamily="cursive"
+        android:textSize="15sp"
+        android:textColor="#17615B"
+        android:layout_below="@+id/textView12"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="10dp" />
-
-    <ImageButton
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:scaleType="fitCenter"
-        android:background="#FFF0A5"
-        android:adjustViewBounds="true"
-        app:srcCompat="@drawable/report"
-        android:id="@+id/imageButton8"
-        android:layout_above="@+id/textView12"
-        android:layout_alignParentEnd="true" />
 
 </RelativeLayout>

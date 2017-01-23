@@ -20,6 +20,8 @@ import android.view.ViewGroup;
 
 import android.widget.TextView;
 
+import org.w3c.dom.Text;
+
 public class Tabbed extends AppCompatActivity {
 
     /**
@@ -56,6 +58,7 @@ public class Tabbed extends AppCompatActivity {
 
         TabLayout tabLayout = (TabLayout) findViewById(R.id.tabs);
         tabLayout.setupWithViewPager(mViewPager);
+
 
 
 
@@ -100,13 +103,13 @@ public class Tabbed extends AppCompatActivity {
                 case 1:
                     TabPainP tab2=new TabPainP();
                     return tab2;
-                case 3:
+                case 2:
                     TabPainbookP tab3=new TabPainbookP();
                     return tab3;
-                case 4:
+                case 3:
                     TabReportP tab4=new TabReportP();
                     return tab4;
-                case 5:
+                case 4:
                     TabSettings tab5=new TabSettings();
                     return tab5;
                 default:

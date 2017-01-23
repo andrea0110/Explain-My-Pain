@@ -207,7 +207,7 @@
         android:textSize="20sp" />
 
     <Button
-        android:id="@+id/login"
+        android:id="@+id/register"
 
         android:text="Register"
         android:textColor="#FFF0A5"

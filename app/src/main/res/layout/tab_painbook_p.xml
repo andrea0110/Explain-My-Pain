@@ -11,6 +11,31 @@
     android:background="#FFF0A5">
 
     <TextView
+        android:text="Fill out a questionnaire dedicated to you. Fill each field to have every day a detailed report of your progress. You can choose a morning, afternoon, evening or daily diary."
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView19"
+        android:textStyle="bold"
+        android:fontFamily="cursive"
+        android:textAlignment="center"
+        android:textSize="25dp"
+        android:textColor="#17615B"
+        android:layout_marginLeft="50dp"
+        android:layout_weight="0.09"
+        android:layout_marginTop="40dp"
+        android:layout_below="@+id/imageView4"
+        android:layout_centerHorizontal="true" />
+
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        app:srcCompat="@drawable/guida"
+        android:id="@+id/imageView4"
+        android:layout_marginTop="53dp"
+        android:layout_below="@+id/register"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
         android:text="Your Daily Pain Book"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
@@ -22,12 +47,12 @@
         android:textColor="#17615B"
         android:layout_marginLeft="50dp"
         android:layout_weight="0.09"
-        android:layout_marginTop="23dp"
+        android:layout_marginTop="32dp"
         android:layout_alignParentTop="true"
-        android:layout_alignEnd="@+id/login" />
+        android:layout_centerHorizontal="true" />
 
     <Button
-        android:id="@+id/login"
+        android:id="@+id/register"
 
         android:text="Compile the questionnaire"
         android:textColor="#FFF0A5"
@@ -43,33 +68,8 @@
         android:layout_height="30dp"
         android:fontFamily="casual"
         android:textStyle="normal|bold"
+        android:layout_marginTop="51dp"
         android:layout_below="@+id/textviewpain"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="40dp" />
-
-    <ImageView
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        app:srcCompat="@drawable/guida"
-        android:id="@+id/imageView4"
-        android:layout_marginBottom="37dp"
-        android:layout_above="@+id/textView19"
         android:layout_centerHorizontal="true" />
-
-    <TextView
-        android:text="Fill out a questionnaire dedicated to you. Fill each field to have every day a detailed report of your progress. You can choose a morning, afternoon, evening or daily diary."
-        android:layout_width="300dp"
-        android:layout_height="wrap_content"
-        android:id="@+id/textView19"
-        android:textStyle="bold"
-        android:fontFamily="cursive"
-        android:textAlignment="center"
-        android:textSize="25dp"
-        android:textColor="#17615B"
-        android:layout_marginLeft="50dp"
-        android:layout_weight="0.09"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="12dp" />
 
 </RelativeLayout>

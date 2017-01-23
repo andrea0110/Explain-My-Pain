@@ -15,7 +15,7 @@ public class Homepage extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        Button register=(Button) findViewById(R.id.login);
+        Button register=(Button) findViewById(R.id.register);
         register.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -24,11 +24,11 @@ public class Homepage extends AppCompatActivity {
             }
         });
 
-        Button doctorLogin=(Button) findViewById(R.id.doctorLogin);
+        Button doctorLogin=(Button) findViewById(R.id.confirmPatient);
         doctorLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent2= new Intent(getApplicationContext(), LoginPage.class);
+                Intent intent2= new Intent(getApplicationContext(), LoginPageD.class);
                 startActivity(intent2);
             }
         });
@@ -37,7 +37,7 @@ public class Homepage extends AppCompatActivity {
         patientLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent3= new Intent(getApplicationContext(), LoginPage.class);
+                Intent intent3= new Intent(getApplicationContext(), LoginPageP.class);
                 startActivity(intent3);
             }
         });

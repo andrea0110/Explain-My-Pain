@@ -8,6 +8,12 @@
     android:fitsSystemWindows="true"
     tools:context="com.example.andreadellaporta.explainmypain.Tabbed">
 
+    <android.support.v4.view.ViewPager
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        android:layout_height="match_parent" />
+
     <android.support.design.widget.AppBarLayout
         android:id="@+id/appbar"
         android:layout_width="match_parent"
@@ -27,31 +33,27 @@
 
             <TextView
                 android:text="Explain My Pain"
-                android:layout_width="350dp"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/textView"
                 android:textStyle="bold"
                 android:fontFamily="cursive"
                 android:textSize="30sp"
                 android:textColor="#17615B"
-                android:textAlignment="center"
-                android:layout_weight="0.89" />
-
-
+                android:textAlignment="center" />
 
         </android.support.v7.widget.Toolbar>
+
+
+
 
         <android.support.design.widget.TabLayout
             android:id="@+id/tabs"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            app:tabTextColor="#17615B"
+            app:tabSelectedTextColor="#17615B"/>
 
     </android.support.design.widget.AppBarLayout>
-
-    <android.support.v4.view.ViewPager
-        android:id="@+id/container"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        app:layout_behavior="@string/appbar_scrolling_view_behavior" />
 
 </android.support.design.widget.CoordinatorLayout>

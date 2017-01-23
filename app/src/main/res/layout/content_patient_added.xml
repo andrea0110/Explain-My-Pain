@@ -49,7 +49,7 @@
         android:layout_below="@+id/imageView" />
 
     <Button
-        android:id="@+id/login"
+        android:id="@+id/returnhomepage"
 
         android:text="Homepage"
         android:textColor="#FFF0A5"

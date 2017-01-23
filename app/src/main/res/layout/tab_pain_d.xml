@@ -47,7 +47,7 @@
         android:id="@+id/spinner3" />
 
     <Button
-        android:id="@+id/login"
+        android:id="@+id/register"
 
         android:text="Indicate patient's pain"
         android:textColor="#FFF0A5"

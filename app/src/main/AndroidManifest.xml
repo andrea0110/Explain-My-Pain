@@ -28,8 +28,12 @@
             android:label="@string/title_activity_registration_page"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".LoginPage"
-            android:label="@string/title_activity_login_page"
+            android:name=".LoginPageP"
+            android:label="LoginPageP"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".LoginPageD"
+            android:label="LoginPageD"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".RegistrationEmail"

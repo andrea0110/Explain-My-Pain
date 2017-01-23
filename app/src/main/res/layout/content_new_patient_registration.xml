@@ -50,7 +50,7 @@
 
 
     <Button
-        android:id="@+id/login"
+        android:id="@+id/register"
 
         android:text="Confirm"
         android:textColor="#FFF0A5"
