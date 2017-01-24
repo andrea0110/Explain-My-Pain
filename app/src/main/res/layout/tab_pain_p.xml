@@ -68,9 +68,18 @@
         android:layout_alignEnd="@+id/textView21"
         android:layout_alignStart="@+id/textView21" />
 
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/guida"
+        android:id="@+id/imageView4"
+        android:layout_below="@+id/register"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="46dp" />
+
     <TextView
         android:text="Here you can indicate the exact point of your pain. Everything will then be transferred to your report."
-        android:layout_width="250dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/textView22"
         android:textStyle="bold"
@@ -78,18 +87,8 @@
         android:textSize="20sp"
         android:textColor="#17615B"
         android:textAlignment="center"
-        android:layout_marginEnd="10dp"
-        android:layout_marginTop="23dp"
-        android:layout_alignTop="@+id/imageView4"
-        android:layout_alignParentEnd="true" />
-
-    <ImageView
-        android:layout_width="150dp"
-        android:layout_height="150dp"
-        app:srcCompat="@drawable/guida"
-        android:id="@+id/imageView4"
-        android:layout_marginBottom="116dp"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentStart="true" />
+        android:layout_alignBottom="@+id/imageView4"
+        android:layout_toEndOf="@+id/imageView4"
+        android:layout_marginBottom="72dp" />
 
 </RelativeLayout>

@@ -48,10 +48,6 @@
             android:label="@string/title_activity_new_patient_registration"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".PatientHomepage"
-            android:label="@string/title_activity_patient_homepage"
-            android:theme="@style/AppTheme.NoActionBar" />
-        <activity
             android:name=".DoctorHomepage"
             android:label="@string/title_activity_doctor_homepage"
             android:theme="@style/AppTheme.NoActionBar" />
