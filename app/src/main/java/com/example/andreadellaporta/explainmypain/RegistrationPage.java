@@ -64,6 +64,7 @@ public class RegistrationPage extends AppCompatActivity implements View.OnClickL
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
+
         inputName=(EditText) findViewById(R.id.fname);
         inputSurname=(EditText) findViewById(R.id.lname);
         inputEmail=(EditText) findViewById(R.id.email);

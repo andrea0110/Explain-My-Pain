@@ -1,6 +1,7 @@
 package com.example.andreadellaporta.explainmypain;
 import android.app.LoaderManager;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.database.Cursor;
 import android.widget.*;
 import android.app.ProgressDialog;
@@ -23,14 +24,26 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 
+import com.android.volley.AuthFailureError;
+import com.android.volley.Request;
+import com.android.volley.Response;
+import com.android.volley.VolleyError;
+import com.android.volley.toolbox.StringRequest;
+
 import java.io.IOException;
 import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.concurrent.Callable;
 
-public class LoginPageP extends AppCompatActivity {
+public class LoginPageP extends AppCompatActivity implements View.OnClickListener{
 
-    Button login;
+    private EditText editTextEmail, editTextPassword;
+    private Button buttonLogin;
+    private ProgressDialog progressDialog;
+
 
 
     @Override
@@ -40,15 +53,83 @@ public class LoginPageP extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        login=(Button) findViewById(R.id.login_p);
-        login.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent=new Intent(getApplicationContext(), Tabbed.class);
-                startActivity(intent);
-            }
-        });
+        if(SharedPrefManager.getInstance(this).isLoggedIn()){
+            startActivity(new Intent(this, Tabbed.class));
+            return;
+        }
+
+        editTextEmail=(EditText) findViewById(R.id.emailP);
+        editTextPassword=(EditText) findViewById(R.id.passwordp);
+        buttonLogin=(Button) findViewById(R.id.login_p);
+
+        progressDialog = new ProgressDialog(this);
+        progressDialog.setMessage("Please wait...");
+
+        buttonLogin.setOnClickListener(this);
 
     }
 
+    private void userLogin(){
+        final String email = editTextEmail.getText().toString().trim();
+        final String password= editTextPassword.getText().toString().trim();
+
+        progressDialog.show();
+
+        StringRequest stringRequest=new StringRequest(
+                Request.Method.POST,
+                Constants.URL_LOGIN,
+                new Response.Listener<String>() {
+                    @Override
+                    public void onResponse(String response) {
+                        progressDialog.dismiss();
+                        try {
+                            JSONObject obj= new JSONObject(response);
+                            if(!obj.getBoolean("error")){
+                                SharedPrefManager.getInstance(getApplicationContext()).userLogin(obj.getInt("id"), obj.getString("email"));
+                                startActivity(new Intent(getApplicationContext(), Tabbed.class));
+                                finish();
+                            }else{
+                                Toast.makeText(
+                                        getApplicationContext(),
+                                        obj.getString("message"),
+                                        Toast.LENGTH_LONG
+                                ).show();
+                            }
+                        } catch (JSONException e) {
+                            e.printStackTrace();
+                        }
+
+                    }
+                },
+
+                new Response.ErrorListener() {
+                    @Override
+                    public void onErrorResponse(VolleyError error) {
+                        progressDialog.dismiss();
+                        Toast.makeText(
+                                getApplicationContext(),
+                                error.getMessage(),
+                                Toast.LENGTH_LONG
+                        ).show();
+                    }
+                }
+        ){
+            @Override
+            protected Map<String, String> getParams() throws AuthFailureError {
+                Map<String,String> params = new HashMap<>();
+                params.put("email", email);
+                params.put("password", password);
+                return params;
+            }
+        };
+
+        RequestHandler.getInstance(this).addToRequestQueue(stringRequest);
+    }
+
+    @Override
+    public void onClick(View view) {
+        if(view==buttonLogin){
+            userLogin();
+        }
+    }
 }

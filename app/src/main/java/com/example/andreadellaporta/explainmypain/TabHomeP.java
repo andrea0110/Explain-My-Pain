@@ -21,10 +21,13 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageButton;
 
+import org.w3c.dom.Text;
+
 
 public class TabHomeP extends Fragment {
     ViewPager vp;
 
+    private TextView textViewName;
 
 
 
@@ -62,7 +65,9 @@ public class TabHomeP extends Fragment {
             }
         });
 
+        textViewName=(TextView) rootView.findViewById(R.id.namesurnamep);
 
+        textViewName.setText(SharedPrefManager.getInstance(this.getContext()).getName()+" "+SharedPrefManager.getInstance(this.getContext()).getSurname());
 
 
         return rootView;
