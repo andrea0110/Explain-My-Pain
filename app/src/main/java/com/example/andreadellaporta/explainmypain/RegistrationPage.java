@@ -41,6 +41,8 @@ import java.net.URL;
 import java.util.HashMap;
 import java.util.Map;
 
+
+
 public class RegistrationPage extends AppCompatActivity implements View.OnClickListener {
 
 
@@ -49,7 +51,7 @@ public class RegistrationPage extends AppCompatActivity implements View.OnClickL
     EditText inputEmail;
     EditText inputPassword;
     EditText inputBirth;
-    RadioButton male, female;
+    RadioButton male, female,doctor,patient;
     String gender;
     private Button btnRegister;
     private ProgressDialog progressDialog;
@@ -72,7 +74,11 @@ public class RegistrationPage extends AppCompatActivity implements View.OnClickL
         inputBirth=(EditText) findViewById(R.id.birth);
         male=(RadioButton) findViewById(R.id.male);
         female=(RadioButton) findViewById(R.id.female);
+        doctor=(RadioButton) findViewById(R.id.doctor);
+        patient=(RadioButton) findViewById(R.id.patient);
+
         btnRegister = (Button) findViewById(R.id.register);
+
 
         progressDialog= new ProgressDialog(this);
 
@@ -133,12 +139,79 @@ public class RegistrationPage extends AppCompatActivity implements View.OnClickL
             }
         };
         RequestHandler.getInstance(this).addToRequestQueue(stringRequest);
+
+
+    }
+
+    private void registerDoctor(){
+        final String name=inputName.getText().toString().trim();
+        final String surname=inputSurname.getText().toString().trim();
+        final String email=inputEmail.getText().toString().trim();
+        final String password=inputPassword.getText().toString().trim();
+
+
+
+        progressDialog.setMessage("Registering doctor...");
+        progressDialog.show();
+
+        StringRequest stringRequest= new StringRequest(Request.Method.POST,
+                Constants.DOCTOR_URL_REGISTER,
+                new Response.Listener<String>() {
+
+                    @Override
+                    public void onResponse(String response) {
+                        progressDialog.dismiss();
+
+                        try{
+                            JSONObject jsonObject=new JSONObject(response);
+                            Toast.makeText(getApplicationContext(), jsonObject.getString("message"), Toast.LENGTH_LONG).show();
+
+                        } catch (JSONException e){
+                            e.printStackTrace();
+                        }
+                    }
+                },
+                new Response.ErrorListener() {
+                    @Override
+                    public void onErrorResponse(VolleyError error) {
+                        progressDialog.hide();
+                        Toast.makeText(getApplicationContext(), error.getMessage(), Toast.LENGTH_LONG).show();
+                    }
+                }){
+
+            @Override
+            protected Map<String, String> getParams() throws AuthFailureError {
+                Map<String,String> params=new HashMap<>();
+                params.put("name",name);
+                params.put("surname",surname);
+                params.put("email",email);
+                params.put("password",password);
+
+                return params;
+            }
+        };
+        RequestHandlerD.getInstance(this).addToRequestQueue(stringRequest);
+
+
     }
 
     @Override
     public void onClick(View view) {
-        if(view==btnRegister)
-            registerUser();
+        if(view==btnRegister){
+            if(patient.isChecked()) {
+                registerUser();
+                finish();
+                Intent intent=new Intent(getApplicationContext(),LoginPageP.class);
+                startActivity(intent);
+            }
+            else if(doctor.isChecked()) {
+                registerDoctor();
+                finish();
+                Intent intent=new Intent(getApplicationContext(),LoginPageD.class);
+                startActivity(intent);
+            }
+        }
+
     }
 }
 
