@@ -67,7 +67,7 @@
         android:inputType="textPersonName"
         android:ems="10"
         android:layout_marginTop="23dp"
-        android:id="@+id/editText"
+        android:id="@+id/fname"
         android:background="@android:color/background_light"
         android:layout_below="@+id/textView2"
         android:layout_alignParentEnd="true" />

@@ -3,7 +3,16 @@ package com.example.andreadellaporta.explainmypain;
 /**
  * Created by andreadellaporta on 20/01/17.
  */
+import android.app.Activity;
+import android.content.Intent;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.TextView;
 
+
+import java.util.HashMap;
 import android.support.v4.app.Fragment;
 import android.os.Bundle;
 import android.support.v4.view.ViewPager;
@@ -15,6 +24,10 @@ import android.widget.ImageButton;
 
 public class TabHomeP extends Fragment {
     ViewPager vp;
+
+
+
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -48,6 +61,9 @@ public class TabHomeP extends Fragment {
                 vp.setCurrentItem(3);
             }
         });
+
+
+
 
         return rootView;
     }

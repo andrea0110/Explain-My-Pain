@@ -119,5 +119,18 @@
         android:layout_alignBottom="@+id/usernameP"
         android:layout_alignEnd="@+id/textView7" />
 
+    <TextView
+        android:text="Reset Your Password"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/pswReset"
+        android:textStyle="bold"
+        android:fontFamily="cursive"
+        android:textSize="25sp"
+        android:textColor="#17615B"
+        android:layout_marginTop="17dp"
+        android:layout_below="@+id/login_p"
+        android:layout_centerHorizontal="true" />
+
 
 </RelativeLayout>
