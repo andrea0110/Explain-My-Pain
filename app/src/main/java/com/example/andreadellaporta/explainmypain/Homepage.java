@@ -24,7 +24,7 @@ public class Homepage extends AppCompatActivity {
             }
         });
 
-        Button doctorLogin=(Button) findViewById(R.id.confirmPatient);
+        Button doctorLogin=(Button) findViewById(R.id.doctorLogin);
         doctorLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

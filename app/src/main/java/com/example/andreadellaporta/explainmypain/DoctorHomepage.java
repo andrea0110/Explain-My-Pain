@@ -5,8 +5,11 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
+import android.widget.TextView;
 
 public class DoctorHomepage extends AppCompatActivity {
+
+    private TextView textViewName;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,6 +35,11 @@ public class DoctorHomepage extends AppCompatActivity {
                 startActivity(intent2);
             }
         });
+
+        textViewName=(TextView) findViewById(R.id.namesurnamed);
+
+        textViewName.setText(SharedPrefManager.getInstance(this).getName()+" "+SharedPrefManager.getInstance(this).getSurname());
+
 
     }
 

@@ -56,6 +56,39 @@
         android:fontFamily="casual"
         android:textStyle="normal|bold" />
 
+    <TextView
+        android:text="Or"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/Or"
+        android:fontFamily="cursive"
+        android:textSize="25sp"
+        android:textColor="#17615B"
+        android:layout_marginTop="44dp"
+        android:layout_below="@+id/register"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:id="@+id/doctorLogin"
+
+        android:text="Doctor Login"
+        android:textColor="#17615B"
+        android:textSize="15sp"
+
+        android:background="@drawable/buttonshape"
+        android:shadowColor="#A8A8A8"
+        android:shadowDx="0"
+        android:shadowDy="0"
+        android:shadowRadius="5"
+        android:textAllCaps="false"
+        android:layout_width="150dp"
+        android:layout_height="30dp"
+        android:fontFamily="casual"
+        android:textStyle="normal|bold"
+        android:layout_marginTop="44dp"
+        android:layout_below="@+id/Or"
+        android:layout_alignParentStart="true" />
+
     <Button
         android:id="@+id/patientLogin"
 
@@ -74,40 +107,7 @@
         android:textStyle="normal|bold"
         android:fontFamily="casual"
         android:layout_alignParentEnd="true"
-        android:layout_alignBottom="@+id/confirmPatient" />
-
-    <Button
-        android:id="@+id/confirmPatient"
-
-        android:text="Doctor Login"
-        android:textColor="#17615B"
-        android:textSize="15sp"
-
-        android:background="@drawable/buttonshape"
-        android:shadowColor="#A8A8A8"
-        android:shadowDx="0"
-        android:shadowDy="0"
-        android:shadowRadius="5"
-        android:textAllCaps="false"
-        android:layout_width="150dp"
-        android:layout_height="30dp"
-        android:fontFamily="casual"
-        android:textStyle="normal|bold"
-        android:layout_marginTop="38dp"
-        android:layout_below="@+id/Or"
-        android:layout_alignParentStart="true" />
-
-    <TextView
-        android:text="Or"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/Or"
-        android:fontFamily="cursive"
-        android:textSize="25sp"
-        android:textColor="#17615B"
-        android:layout_marginTop="44dp"
-        android:layout_below="@+id/register"
-        android:layout_centerHorizontal="true" />
+        android:layout_alignBottom="@+id/doctorLogin" />
 
 
 </RelativeLayout>
