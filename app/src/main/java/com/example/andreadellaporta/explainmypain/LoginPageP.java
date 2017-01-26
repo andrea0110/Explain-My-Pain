@@ -85,7 +85,7 @@ public class LoginPageP extends AppCompatActivity implements View.OnClickListene
                         try {
                             JSONObject obj= new JSONObject(response);
                             if(!obj.getBoolean("error")){
-                                SharedPrefManager.getInstance(getApplicationContext()).userLogin(obj.getInt("id"), obj.getString("email"));
+                                SharedPrefManager.getInstance(getApplicationContext()).userLogin( obj.getString("email"));
                                 startActivity(new Intent(getApplicationContext(), Tabbed.class));
                                 finish();
                             }else{

@@ -200,15 +200,15 @@ public class RegistrationPage extends AppCompatActivity implements View.OnClickL
         if(view==btnRegister){
             if(patient.isChecked()) {
                 registerUser();
-                finish();
-                Intent intent=new Intent(getApplicationContext(),LoginPageP.class);
-                startActivity(intent);
+                /*Intent intent=new Intent(getApplicationContext(),LoginPageP.class);
+                startActivity(intent);*/
+
             }
             else if(doctor.isChecked()) {
                 registerDoctor();
-                finish();
-                Intent intent=new Intent(getApplicationContext(),LoginPageD.class);
-                startActivity(intent);
+                /*Intent intent=new Intent(getApplicationContext(),LoginPageD.class);
+                startActivity(intent);*/
+
             }
         }
 
