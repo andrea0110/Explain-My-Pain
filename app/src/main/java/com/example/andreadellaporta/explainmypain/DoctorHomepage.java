@@ -38,7 +38,7 @@ public class DoctorHomepage extends AppCompatActivity {
 
         textViewName=(TextView) findViewById(R.id.namesurnamed);
 
-        textViewName.setText(SharedPrefManager.getInstance(this).getName()+" "+SharedPrefManager.getInstance(this).getSurname());
+        textViewName.setText(SharedPrefManagerD.getInstance(this).getName()+" "+SharedPrefManagerD.getInstance(this).getSurname());
 
 
     }

@@ -67,7 +67,7 @@ public class LoginPageD extends AppCompatActivity implements View.OnClickListene
                         try {
                             JSONObject obj= new JSONObject(response);
                             if(!obj.getBoolean("error")){
-                                SharedPrefManagerD.getInstance(getApplicationContext()).doctorLogin( obj.getString("email"));
+                                SharedPrefManagerD.getInstance(getApplicationContext()).doctorLogin(obj.getInt("id"), obj.getString("email"), obj.getString("name"), obj.getString("surname"));
                                 startActivity(new Intent(getApplicationContext(), DoctorHomepage.class));
                                 finish();
                             }else{
